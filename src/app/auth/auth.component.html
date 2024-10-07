@@ -1,0 +1,49 @@
+<div class="auth-container">
+  <!-- Formulaire de connexion -->
+  <div *ngIf="isLoginMode && !isForgotPasswordMode">
+    <h2>Connexion</h2>
+    <form (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm">
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" ngModel name="email" required />
+      </div>
+      <div>
+        <label for="password">Mot de passe</label>
+        <input type="password" id="password" ngModel name="password" required />
+      </div>
+      <button type="submit" [disabled]="!loginForm.valid">Se connecter</button>
+      <button type="button" (click)="switchMode()">Créer un compte</button>
+      <button type="button" (click)="onForgotPassword()">Mot de passe oublié ?</button>
+    </form>
+  </div>
+
+  <!-- Formulaire d'inscription -->
+  <div *ngIf="!isLoginMode && !isForgotPasswordMode">
+    <h2>Inscription</h2>
+    <form (ngSubmit)="onSubmit(signupForm)" #signupForm="ngForm">
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" ngModel name="email" required />
+      </div>
+      <div>
+        <label for="password">Mot de passe</label>
+        <input type="password" id="password" ngModel name="password" required />
+      </div>
+      <button type="submit" [disabled]="!signupForm.valid">S'inscrire</button>
+      <button type="button" (click)="switchMode()">J'ai déjà un compte</button>
+    </form>
+  </div>
+
+  <!-- Formulaire de réinitialisation de mot de passe -->
+  <div *ngIf="isForgotPasswordMode">
+    <h2>Réinitialisation du mot de passe</h2>
+    <form (ngSubmit)="onForgotPassword(forgotPasswordForm)" #forgotPasswordForm="ngForm">
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" ngModel name="email" required />
+      </div>
+      <button type="submit" [disabled]="!forgotPasswordForm.valid">Envoyer</button>
+      <button type="button" (click)="switchMode()">Retour</button>
+    </form>
+  </div>
+</div>
