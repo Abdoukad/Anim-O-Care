@@ -3,10 +3,12 @@
 class AccesDonnees
 {
 
-    private static $serveur = 'mysql:host=localhost';
-    private static $bdd = 'dbname=animal_health';
-    private static $user = 'root';
-    private static $mdp = '';
+    private static $serveur = $_ENV['DB_HOST'];
+    private static $bdd = $dbname = $_ENV['DB_NAME'];
+    private static $user = $_ENV['DB_USER'];
+    private static $mdp = $_ENV['DB_PASSWORD'];
+
+    
 
     /**
      *
