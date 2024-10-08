@@ -1,30 +1,27 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  // URL de l'API backend pour chaque opération
-  private signupUrl = 'https://votre-backend-url/api/register';
-  private loginUrl = 'https://votre-backend-url/api/login';
-  private forgotPasswordUrl = 'https://votre-backend-url/api/forgot-password';
+  constructor() {}
 
-  constructor(private http: HttpClient) {}
-
-  // Méthode pour inscrire un nouvel utilisateur
-  signup(email: string, password: string): Observable<any> {
-    return this.http.post(this.signupUrl, { email, password });
-  }
-
-  // Méthode pour connecter un utilisateur existant
+  // Méthode de connexion simulée
   login(email: string, password: string): Observable<any> {
-    return this.http.post(this.loginUrl, { email, password });
+    console.log('Connexion simulée avec', email, password);
+    return of({ success: true, message: 'Connexion simulée réussie' });
   }
 
-  // Méthode pour réinitialiser le mot de passe de l'utilisateur
+  // Méthode d'inscription simulée
+  signup(email: string, password: string): Observable<any> {
+    console.log('Inscription simulée avec', email, password);
+    return of({ success: true, message: 'Inscription simulée réussie' });
+  }
+
+  // Méthode de réinitialisation de mot de passe simulée
   forgotPassword(email: string): Observable<any> {
-    return this.http.post(this.forgotPasswordUrl, { email });
+    console.log('Réinitialisation simulée pour', email);
+    return of({ success: true, message: 'Email de réinitialisation simulé envoyé' });
   }
 }

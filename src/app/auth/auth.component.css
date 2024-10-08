@@ -1,0 +1,143 @@
+/* Conteneur de l'authentification */
+.auth-container {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-family: 'Roboto', sans-serif;
+  background-color: #ffffff;
+}
+
+/* Titre */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #3B8EDB; /* Bleu clair */
+}
+
+/* Groupe de formulaires */
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+.form-control:focus {
+  border-color: #6CCF7A; /* Vert doux */
+  outline: none;
+}
+
+/* Bouton principal */
+.btn-primary {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #6CCF7A; /* Vert doux */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #2D8C4E; /* Vert foncé */
+}
+
+/* Bouton secondaire */
+.btn-secondary {
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #3B8EDB; /* Bleu clair */
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 48%;
+  display: inline-block;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.btn-secondary:hover {
+  background-color: #2D8C4E; /* Vert foncé */
+}
+
+/* Lien bouton */
+.btn-link {
+  background: none;
+  border: none;
+  color: #3B8EDB;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-left: 5px;
+}
+
+.btn-link:hover {
+  color: #6CCF7A;
+}
+
+/* Actions */
+.actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.actions button {
+  margin: 0 5px;
+  width: calc(50% - 10px); /* Pour garder de l'espace sur les côtés */
+}
+
+/* Arrière-plan et conteneur */
+body {
+  background-color: #F5F5F5; /* Gris clair */
+}
+
+@media (max-width: 576px) {
+  .auth-container {
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
+
+  .actions {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .actions button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}

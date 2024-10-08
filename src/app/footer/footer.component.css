@@ -1,0 +1,104 @@
+:host {
+  width: 100%;
+  background-color: #F5F5F5;
+  padding: 40px 0;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin: 10px 20px;
+}
+
+.footer-section h3 {
+  color: #6CCF7A;
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+.footer-section h4 {
+  color: #3B8EDB;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.footer-section p, .footer-section ul, .footer-section a {
+  color: #666;
+  font-size: 0.9em;
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 5px 0;
+}
+
+.footer-section ul li a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #6CCF7A;
+  text-decoration: underline;
+}
+
+.social-icons a {
+  color: #3B8EDB;
+  font-size: 1.4em;
+  margin-right: 15px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #6CCF7A;
+}
+
+.footer-bottom {
+  background-color: #E8E8E8;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 0.85em;
+  color: #333;
+  margin-top: 20px;
+  border-top: 1px solid #ccc;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+/* Media Queries pour ajuster l'espacement en format mobile */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px; /* Réduction de l'espace de padding */
+  }
+
+  .footer-section {
+    margin: 10px 0; /* Réduction de l'espace entre les sections */
+  }
+
+  .footer-bottom {
+    padding: 10px 0;
+  }
+}

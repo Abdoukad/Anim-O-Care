@@ -1,0 +1,191 @@
+/* Style de la barre de navigation */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FFD700;
+  padding: 10px 20px;
+  flex-wrap: wrap; /* Pour ajuster le contenu sur les petits écrans */
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 80px;
+  height: auto;
+  margin-right: 15px;
+}
+
+.navbar h1 {
+  font-size: 26px;
+  color: #000;
+  margin: 0;
+}
+
+.navbar nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.nav-link {
+  color: #000;
+  text-decoration: none;
+  margin: 5px;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  color: #555;
+}
+
+/* Style du contenu principal */
+.home-content {
+  text-align: center;
+  margin-top: 20px;
+  z-index: 1;
+  position: relative;
+}
+
+.home-content h2 {
+  font-size: 32px;
+  color: #3B8EDB;
+  margin-bottom: 10px;
+}
+
+.home-content p {
+  font-size: 18px;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto 20px;
+}
+
+/* Galerie d'images */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  padding: 20px;
+  justify-items: center;
+  margin: 20px 0;
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.gallery-image:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+/* Section des fonctionnalités */
+.features-section {
+  background-color: #F5F5F5;
+  padding: 40px;
+  margin: 40px auto;
+  max-width: 750px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.features-section h3 {
+  font-size: 28px;
+  color: #3B8EDB;
+  margin-bottom: 15px;
+}
+
+.features-section p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.features-section ul {
+  list-style: none;
+  padding: 0;
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.features-section ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+  font-weight: 500;
+}
+
+.features-section ul li i {
+  font-size: 20px;
+  color: #6CCF7A;
+}
+
+/* Style des boutons */
+.button-container {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: #6CCF7A;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px 5px; /* Espace horizontal pour éviter qu'ils soient trop collés */
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #2D8C4E;
+}
+
+/* Media Queries pour ajuster l'espacement en format mobile */
+@media (max-width: 768px) {
+  .button-container {
+    margin-top: 10px;
+  }
+
+  .btn-primary {
+    padding: 10px 25px;
+    font-size: 15px;
+    margin: 8px 0; /* Ajout d'espace entre les boutons */
+  }
+
+  .navbar {
+    flex-direction: column;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .logo {
+    width: 80px;
+  }
+}
+
+@media (max-width: 576px) {
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .home-content h2 {
+    font-size: 26px;
+  }
+}

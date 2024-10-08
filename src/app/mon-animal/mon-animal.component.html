@@ -1,0 +1,25 @@
+<div class="container">
+  <h2>Mes Animaux</h2>
+
+  <div class="form-group">
+    <input type="text" [(ngModel)]="animalName" placeholder="Nom" />
+    <input type="text" [(ngModel)]="animalSpecies" placeholder="Espèce" />
+    <input type="text" [(ngModel)]="animalAge" placeholder="Âge" />
+
+    <!-- Mise à jour de l'étiquette pour le champ de fichier -->
+    <label for="animalImage">Ajoutez photo de mon animal :</label>
+    <input type="file" id="animalImage" accept="image/*" (change)="onFileSelected($event)" />
+
+    <button (click)="addAnimal()">Ajouter l'Animal</button>
+  </div>
+
+  <div class="animal-cards">
+    <div *ngFor="let animal of animals" class="animal-card">
+      <img [src]="animal.image" alt="Photo de {{ animal.name }}" onerror="this.src='assets/default-animal.png';">
+      <h4>{{ animal.name }}</h4>
+      <p>Espèce : {{ animal.species }}</p>
+      <p>Âge : {{ animal.age }} ans</p>
+      <button (click)="removeAnimal(animal)">Supprimer</button>
+    </div>
+  </div>
+</div>
